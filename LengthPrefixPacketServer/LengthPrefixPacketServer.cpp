@@ -82,6 +82,7 @@ int main(void)
 		// 네트워크 바이트 오더 -> 호스트 바이트 오더로 교체 한다.
 		uint32_t bodyLength = ntohl(headLength); 
 
+		std::cout << "Body Length : " << bodyLength << std::endl;
 		if (bodyLength == 0 || bodyLength > 4096)
 		{
 			std::cout << "Invalid packet size : " << bodyLength << "\n";
