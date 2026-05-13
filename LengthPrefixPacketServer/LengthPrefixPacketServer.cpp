@@ -63,6 +63,9 @@ int main(void)
 	bind(listenSock, reinterpret_cast<sockaddr*>(&serverAddr), sizeof(serverAddr));
 	listen(listenSock, SOMAXCONN);
 
+	SetConsoleOutputCP(CP_UTF8);
+	SetConsoleCP(CP_UTF8);
+
 	std::cout << "Echo Server Start Port Info : 7777\n";
 	
 	SOCKET clientSock = accept(listenSock, nullptr, nullptr);
